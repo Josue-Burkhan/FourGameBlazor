@@ -1,0 +1,58 @@
+# ================================
+# .NET / Visual Studio / Blazor
+# ================================
+
+## Build results
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## VS / Rider / VS Code
+.vs/
+.idea/
+.vscode/
+
+## ASP.NET Core
+appsettings.Development.json
+appsettings.Local.json
+
+## Logs
+*.log
+
+## OS generated
+.DS_Store
+Thumbs.db
+
+## Test results
+TestResults/
+
+## NuGet
+*.nupkg
+.nuget/
+
+## Publish output
+publish/
+
+## Secrets
+secrets.json
+
+## Blazor WebAssembly (si luego usas WASM)
+wwwroot/service-worker.published.js
+wwwroot/service-worker.js
+
+## Temporary files
+*.tmp
+*.temp
+*.bak
+
+## Node (si usas tooling frontend)
+node_modules/
+
+## SQLite / local DB
+*.db
+*.sqlite
