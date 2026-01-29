@@ -27,19 +27,31 @@
     <span class="alert-info">@CurrentTurn</span>
 </article>
 
-<div>
-    <div class="board">
+<div class="game-layout">
+    <div class="board-container">
+        <div class="board">
+            @for (var i = 0; i < 42; i++)
+            {
+                <span class="container">
+                    <span></span>
+                </span>
+            }
+        </div>
         @for (var i = 0; i < 42; i++)
         {
-            <span class="container">
-                <span></span>
-            </span>
+            <span class="@pieces[i]"></span>
         }
     </div>
-    @for (var i = 0; i < 42; i++)
-    {
-        <span class="@pieces[i]"></span>
-    }
+
+    <div class="move-history">
+        <h3>Move History</h3>
+        <ul>
+            @foreach (var move in State.MoveHistory)
+            {
+                <li>@move</li>
+            }
+        </ul>
+    </div>
 </div>
 
 

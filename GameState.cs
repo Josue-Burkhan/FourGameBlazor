@@ -170,6 +170,7 @@ public class GameState
 			landingSpot = i;
 		}
 
+		MoveHistory.Add($"Player {PlayerTurn} placed piece in column {column + 1}");
 		TheBoard[landingSpot] = PlayerTurn;
 
 		return ConvertLandingSpotToRow(landingSpot);
@@ -178,8 +179,11 @@ public class GameState
 
 	public List<int> TheBoard { get; private set; } = new List<int>(new int[42]);
 
+	public List<string> MoveHistory { get; private set; } = new List<string>();
+
 	public void ResetBoard() {
 		TheBoard = new List<int>(new int[42]);
+		MoveHistory.Clear();
 	}
 
 	private byte ConvertLandingSpotToRow(int landingSpot)
